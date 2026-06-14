@@ -1,6 +1,6 @@
 import React from "react"
 function TodoList(props) {
-  const { todos, handleComplete } = props
+  const { todos, handleCompleted } = props
   return (
     <div>
       <h2>Child Component</h2>
@@ -9,7 +9,7 @@ function TodoList(props) {
           <li key={todo.key}>
             <label>{todo.label}</label>
             {!todo.completed && (
-              <button onClick={(e)=>handleComplete(todo.key)}>Complete</button>
+              <button onClick={(e)=>handleCompleted(todo.key)}>Complete</button>
             )}
           </li>
         ))}

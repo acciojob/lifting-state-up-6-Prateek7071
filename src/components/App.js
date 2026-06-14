@@ -21,7 +21,7 @@ const App = () => {
     completed: false,
   },
   ]);
-  function handlecompleted(key) {
+  function handleCompleted(key) {
     setTodos((prev) => (
       prev.map((todo) => (
         todo.key === key ? { ...todo, completed: true } : todo
@@ -31,7 +31,7 @@ const App = () => {
   return (
     <div>
       <h1>Parent Component</h1>
-        <TodoList  todos={todos} handlecompleted={handlecompleted} />
+        <TodoList  todos={todos} handleCompleted={handleCompleted} />
     </div>
   );
 };
