@@ -8,23 +8,23 @@ const App = () => {
   {
     key: "todo1",
     label: "Learn React",
-    isComplete: false,
+    Complete: false,
   },
   {
     key: "todo2",
     label: "Build a React app",
-    isComplete: false,
+    Complete: false,
   },
   {
     key: "todo3",
     label: "Deploy the React app",
-    isComplete: false,
+    Complete: false,
   },
   ]);
   function handleComplete(key) {
     setTodos((prev) => (
       prev.map((todo) => (
-        todo.key === key ? { ...todo, isComplete: true } : todo
+        todo.key === key ? { ...todo, Complete: true } : todo
       ))
     ));
   }
