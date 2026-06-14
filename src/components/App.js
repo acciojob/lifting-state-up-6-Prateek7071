@@ -8,30 +8,30 @@ const App = () => {
   {
     key: "todo1",
     label: "Learn React",
-    Complete: false,
+    completed: false,
   },
   {
     key: "todo2",
     label: "Build a React app",
-    Complete: false,
+    completed: false,
   },
   {
     key: "todo3",
     label: "Deploy the React app",
-    Complete: false,
+    completed: false,
   },
   ]);
-  function handleComplete(key) {
+  function handlecompleted(key) {
     setTodos((prev) => (
       prev.map((todo) => (
-        todo.key === key ? { ...todo, Complete: true } : todo
+        todo.key === key ? { ...todo, completed: true } : todo
       ))
     ));
   }
   return (
     <div>
       <h1>Parent Component</h1>
-        <TodoList  todos={todos} handleComplete={handleComplete} />
+        <TodoList  todos={todos} handlecompleted={handlecompleted} />
     </div>
   );
 };
