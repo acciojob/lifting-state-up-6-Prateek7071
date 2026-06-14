@@ -1,5 +1,6 @@
 import React from "react"
-function TodoList({ todos, handleComplete }){
+function TodoList(props) {
+  const { todos, handleComplete } = props
   return (
     <div>
       <h2>Child Component</h2>
