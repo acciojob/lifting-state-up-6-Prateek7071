@@ -8,7 +8,7 @@ function TodoList({ todos, handleComplete }){
           <li key={todo.key}>
             <label>{todo.label}</label>
             {!todo.isComplete && (
-              <button onClick={()=>handleComplete(todo.key)}>Complete</button>
+              <button onClick={(e)=>handleComplete(todo.key)}>Complete</button>
             )}
           </li>
         ))}
